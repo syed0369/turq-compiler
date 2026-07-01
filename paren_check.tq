@@ -1,0 +1,66 @@
+// Parenthesis checker - input a sequence of '(' and ')' and checks validity
+
+// Read input
+while != 10 {
+    right
+    read
+}
+
+// Back to start of input
+while != 0 {
+    left
+}
+right
+
+// Logic:
+// 1. Parse input, if char is '(' inc balance else if char is ')' dec balance
+// 2. If balance < 0 at any point display N - halt
+// 3. If at end balance == 0 display Y, else N
+while != 10 {
+    if == 40 {
+        dec 40
+        while != 10 {
+            right
+        }
+        right
+        inc 1
+        left
+    }
+    if == 41 {
+        dec 41
+        while != 10 {
+            right
+        }
+        right
+        if == 0 {
+            right
+            inc 78
+            print
+            halt
+        }
+        dec 1
+        left
+    }
+    while != 0 {
+        left
+    }
+    right
+}
+
+right
+
+if == 0 {
+    right
+    inc 89
+    print
+    left
+}
+
+if != 0 {
+    right
+    inc 78
+    print
+    left
+}
+
+halt

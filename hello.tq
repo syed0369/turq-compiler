@@ -1,0 +1,8 @@
+// Hello - prints "Hi"
+// Cell 0: working cell
+
+inc 72      // cell[0] = 72 = 'H'
+print
+inc 33      // 72 + 33 = 105 = 'i'
+print
+halt
