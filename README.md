@@ -130,3 +130,8 @@ nasm -f elf64 first.asm -o first.o
 ld first.o -o first
 ./first
 ```
+
+Another option is to change the INPUT variable in `Makefile` to the turq source code file adn run 
+```bash
+make run
+```
