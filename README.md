@@ -131,7 +131,7 @@ ld first.o -o first
 ./first
 ```
 
-Another option is to change the INPUT variable in `Makefile` to the turq source code file adn run 
+Another option is to change the INPUT variable in `Makefile` to the turq source code file and run 
 ```bash
 make run
 ```
