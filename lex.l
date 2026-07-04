@@ -1,5 +1,6 @@
 %{
     #include "y.tab.h"
+    void yyerror(const char* msg);
 %}
 
 %%
@@ -13,18 +14,19 @@
 "inc"           { return INC; }
 "dec"           { return DEC; }
 "halt"          { return HALT; }
+[{}]            { return yytext[0]; }
 
 "=="            { return EQ; }
 "!="            { return NEQ; }
 ">"             { return GT; }
 "<"             { return LT; }
 
-[0-9]+          { yylval.num = atoi(yytext); return NUM; }
+-?[0-9]+        { yylval.num = atoi(yytext); return NUM; }
 
-"//"[^\n]*      { }
+"//"[^\n]*       { }
 [ \t\n]+        { }
 
-.               { return yytext[0]; }
+.               { yyerror("invalid character"); }
 
 %%
 

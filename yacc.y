@@ -133,7 +133,7 @@ while_head
           printf("\n    ; while > %d\n", $3);
           printf(".loop%d:\n", L);
           printf("    cmp byte [rbx], %d\n", $3);
-          printf("    jbe .loop%d_end\n", L);
+          printf("    jle .loop%d_end\n", L);
           $$ = L;
       }
     | WHILE LT NUM
@@ -142,7 +142,7 @@ while_head
           printf("\n    ; while < %d\n", $3);
           printf(".loop%d:\n", L);
           printf("    cmp byte [rbx], %d\n", $3);
-          printf("    jae .loop%d_end\n", L);
+          printf("    jge .loop%d_end\n", L);
           $$ = L;
       }
     ;
@@ -169,7 +169,7 @@ if_head
           int L = new_label();
           printf("\n    ; if > %d\n", $3);
           printf("    cmp byte [rbx], %d\n", $3);
-          printf("    jbe .if%d_end\n", L);
+          printf("    jle .if%d_end\n", L);
           $$ = L;
       }
     | IF LT NUM
@@ -177,7 +177,7 @@ if_head
           int L = new_label();
           printf("\n    ; if < %d\n", $3);
           printf("    cmp byte [rbx], %d\n", $3);
-          printf("    jae .if%d_end\n", L);
+          printf("    jge .if%d_end\n", L);
           $$ = L;
       }
     ;
