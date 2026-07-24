@@ -1,6 +1,6 @@
 CC     = gcc
 CFLAGS = -g -Wall -Wno-unused-function
-INPUT  = hello.tq
+INPUT  = ./examples/paren_check.tq
 
 .PHONY: all clean run paren
 

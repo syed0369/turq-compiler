@@ -1,0 +1,56 @@
+// Parenthesis checker - input a sequence of '(' and ')' and checks validity
+
+// Read input
+while != 10 {
+    right
+    read
+}
+
+// Back to start of input
+while != 0 {
+    left
+}
+right
+
+// Logic:
+// 1. Mark the first encountered '(' as X, then mark the nearest ')' as Y
+// 2. If at anytime there is ')' instead of '(' while moving from the most recently marked X return false (N)
+// 3. Also if there is no matching ')' left for a '(', return false (N)
+// 4. Return true (Y) if the input is traversed completely
+while != 10 {
+    while == 89 {
+        right
+    }
+    if == 40 {
+        inc 48
+        right
+        while != 41 {
+            // Print N -> false/not valid
+            if == 10 {
+                inc 68
+                print
+                halt
+            }
+            right
+        }
+        inc 48
+        left
+        while != 88 {
+            left
+        }
+        right
+    }
+    // Print N -> false/not valid
+    if == 41 {
+        inc 37
+        print
+        halt
+    }
+}
+
+// Print Y -> true/valid
+right
+inc 89
+print
+
+halt
